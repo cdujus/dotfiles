@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap');
+:root { --font-primary: "Merriweather Sans", sans-serif; --font-display: "Merriweather Sans", sans-serif; --font-headline: "Merriweather Sans", sans-serif; }
+[class*="messageContent"] {
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* Ocultar la barra superior de Friends */
+div[class^="bar_"][data-window-chrome] {
+  display: none !important;
+}
+
+div[class^="base_"] {
+  --custom-app-top-bar-height: 0px !important;
+}
+
+/* Fondo degradado (verde oliva → ciruela) */
+div[class^="base_"] {
+  background: linear-gradient(
+    90deg,
+    rgba(107, 96, 64, 0.6) 0%,
+    rgba(94, 74, 88, 0.6) 50%,
+    rgba(79, 64, 96, 0.6) 100%
+  ) !important;
+}
+
+/* Paneles semitransparentes para que se vea el degradado */
+.theme-dark {
+  --background-base-lowest: rgba(20, 20, 25, 0.25) !important;
+  --background-base-lower: rgba(25, 25, 30, 0.25) !important;
+  --background-base-low: rgba(30, 30, 35, 0.25) !important;
+  --background-surface-high: rgba(35, 35, 40, 0.25) !important;
+}
